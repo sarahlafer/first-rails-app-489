@@ -1,0 +1,18 @@
+<h1>Our contact</h1>
+
+<form action="/contact" method="get">
+  <input type="text" name="member" placeholder="Who are you looking for?" value="<%= params[:member] %>">
+  <input type="text" name="email">
+  <input type="submit">
+</form>
+
+<ul>
+  <% @team.each do |member| %>
+    <li>
+      <%= member %>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Home", root_path %>
